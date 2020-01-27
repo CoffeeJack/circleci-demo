@@ -7,6 +7,9 @@ jobs:
     steps:
       - checkout
       - run:
-        command: echo "test"
-      - deploy:
-        command: ./.circlci/deploy.sh
+          command: echo "test"
+
+workflows:
+  test_workflow:
+    jobs:
+      - my_first_job
